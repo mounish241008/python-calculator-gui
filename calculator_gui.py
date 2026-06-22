@@ -1,10 +1,10 @@
 import tkinter as tk
 root = tk.Tk()
-root.title("CALCULATOR")
-root.geometry("400x400")
-display = tk.Entry(root,width=25)
-display.grid(row=0,column=0,columnspan=5,padx=10,pady=10)
-
+root.title("CALCULATOR.v2")
+root.geometry("300x250")
+display = tk.Entry(root,width=30,font=("Arial",12))
+display.grid(row=0,column=0,columnspan=5,padx=15,pady=15)
+root.resizable(False,False)
 def add_1() :
     display.insert(tk.END ,"1")
 button_1 = tk.Button(root, text= "1",command= add_1,width=5,height=2)
@@ -70,5 +70,5 @@ def calculate() :
     display.delete(0,tk.END)
     display.insert(tk.END,result)
 equal_button = tk.Button(root,text="=",command= calculate,width=5,height=2)
-equal_button.grid(row=2,column=5,padx=2,pady=2)
+equal_button.grid(row=4,column=3,padx=2,pady=2)
 root.mainloop()
